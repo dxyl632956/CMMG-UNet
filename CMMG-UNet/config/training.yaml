@@ -1,0 +1,49 @@
+TRAIN:
+  train_batch_size: 32
+  lr: 0.0003
+
+  valid_batch_size: 32
+
+  image_size: [224,224]
+
+  min_epochs: 1
+  max_epochs: 50
+  patience: 20
+
+  device: 1
+
+  model_save_path: ../autodl-tmp/save_model
+  model_save_filename: kmmgunet 
+
+MODEL:
+  bert_type: ../MMI-UNet-main_end/lib/BiomedVLP-CXR-BERT-specialized
+  vision_type: ../MMI-UNet-main_end/lib/convnext-tiny-224
+  project_dim: 768
+  memory_N: 512
+  memory_K: 3
+  warmup_epochs: 0
+  cluster_k: 100
+DATA: # QaTa-COV19-v2 MosMedDataPlus
+  train_csv_path: ../MMI-UNet-main_end/data/Qata-COV19-v2/prompt/train.csv
+  train_root_path: ../MMI-UNet-main_end/data/Qata-COV19-v2/QaTa-COV19-v2-in/Train Set
+  # train_csv_path: ../MMI-UNet-main_end/data/MosMedData/prompt/train.csv
+  # train_root_path: ../MMI-UNet-main_end/data/MosMedData/train
+
+  
+  valid_csv_path: ../MMI-UNet-main_end/data/Qata-COV19-v2/prompt/val.csv
+  valid_root_path: ../MMI-UNet-main_end/data/Qata-COV19-v2/QaTa-COV19-v2-in/Val
+
+  # valid_csv_path: ../MMI-UNet-main_end/data/MosMedData/prompt/val.csv
+  # valid_root_path: ../MMI-UNet-main_end/data/MosMedData/val
+
+  # valid_csv_path: ../MMI-UNet-main_end/data/MosMedData/prompt/test.csv
+  # valid_root_path: ../MMI-UNet-main_end/data/MosMedData/test
+
+  test_csv_path: ../MMI-UNet-main_end/data/MosMedData/prompt/test.csv
+  test_root_path: ../MMI-UNet-main_end/data/MosMedData/test
+  
+  # valid_csv_path: ../MMI-UNet-main_end/data/Qata-COV19-v2/prompt/test.csv
+  # valid_root_path: ../MMI-UNet-main_end/data/Qata-COV19-v2/QaTa-COV19-v2-in/Test Set
+
+  # test_csv_path: ../MMI-UNet-main_end/data/Qata-COV19-v2/prompt/test.csv
+  # test_root_path: ../MMI-UNet-main_end/data/Qata-COV19-v2/QaTa-COV19-v2-in/Test Set
