@@ -9,7 +9,8 @@ This is the official PyTorch implementation of **CMMG-UNet**.
 > **Abstract:** Multi-modal learning has emerged as a promising direction for medical image segmentation, yet existing methods grapple with "mode collapse" in memory mechanisms and prohibitive computational costs. In this paper, we propose CMMG-UNet, a novel asymmetric framework designed for efficient and robust lesion segmentation. We introduce a **Clustered and Loss-Gated Memory Bank (CLMB)** to retain "hard samples" and mitigate catastrophic forgetting. To bridge the semantic gap, a **Multi-Granularity Textual-Visual Fusion (MTVF)** module is devised to hierarchically align visual features with text semantics. CMMG-UNet achieves state-of-the-art performance with a highly efficient computational footprint of only 21.0G FLOPs.
 
 ## 🚀 Framework
-<img width="4753" height="2483" alt="struct" src="https://github.com/user-attachments/assets/45b278d5-c61a-4f72-b292-86bce3f2bb74" />
+<img width="4799" height="2660" alt="final_struct" src="https://github.com/user-attachments/assets/0048cc26-72b6-4117-9b0f-e673926dc67a" />
+
 
 
 ## 📊 Main Results
@@ -103,3 +104,4 @@ Our checkpoints will be made public after the paper is accepted.
 
 
 This codebase is built upon [MMI-UNet](https://www.google.com/search?q=https://github.com/PhuocNguyenBui/MMI-UNet) and [GuideDecoder](https://github.com/Junelin2333/LanGuideMedSeg-MICCAI2023). We sincerely thank the authors for making their excellent source code publicly available.
+
